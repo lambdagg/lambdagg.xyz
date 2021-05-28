@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+  /* Hide the noscript div */
+  document.getElementById("noscript").remove();
+
   /* Make the social buttons clickable */
-  [].forEach.call(document.querySelectorAll('.container > .title > .inline > img'), function(element) {
+  [].forEach.call(document.querySelectorAll('.container > .title > .inline > .social'), function(element) {
     element.addEventListener('click', function () {
-      window.open(element.getAttribute('data-url'), '_blank')
+      window.open(element.getAttribute('data-redirect-url'), '_blank')
     });
   });
 
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const t = window.setInterval(function() {
         if (opacity >= 1) window.clearInterval(t);
         opacity += fadeIntensity;
-        document.querySelector('body').style.opacity = opacity;
+        document.querySelector('.container').style.opacity = opacity;
       });
     }
   });
