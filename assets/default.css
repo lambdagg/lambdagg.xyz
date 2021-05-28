@@ -11,7 +11,7 @@ body {
 }
 
 #noscript {
-  animation: fadeIn 6s;
+  animation: fadeIn 10s;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,10 +66,13 @@ body {
   height: 46px;
   cursor: pointer;
   border-radius: 8px;
-  transition: 150ms;
+  transition: 300ms;
 }
 
 .container > .title > .inline > .social:hover {
   fill: #55D6AA;
-  background-color: #fff;
+}
+
+.container > .title > .inline > .social > #bg {
+  transition: 300ms;
 }

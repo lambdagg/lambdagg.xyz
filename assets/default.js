@@ -3,7 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById("noscript").remove();
 
   /* Make the social buttons clickable */
-  [].forEach.call(document.querySelectorAll('.container > .title > .inline > .social'), function(element) {
+  [].forEach.call(document.querySelectorAll('.container > .title > .inline > svg'), function(element) {
+    element.addEventListener('mouseover', function () {
+      console.log(element.querySelector('#bg').setAttribute('fill', 'white'));
+    });
+    element.addEventListener('mouseout', function () {
+      console.log(element.querySelector('#bg').setAttribute('fill', '#222'));
+    });
     element.addEventListener('click', function () {
       window.open(element.getAttribute('data-redirect-url'), '_blank')
     });
