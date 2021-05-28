@@ -1,6 +1,9 @@
+const loc = window.location.toString();
+if (!loc.includes('/localhost:') && !loc.includes('https://lambdagg.xyz')) window.location = 'https://lambdagg.xyz';
+
 document.addEventListener('DOMContentLoaded', function() {
   /* Hide the noscript div */
-  document.getElementById("noscript").remove();
+  document.getElementById('noscript').remove();
 
   /* Make the social buttons clickable */
   [].forEach.call(document.querySelectorAll('.container > .title > .inline > svg'), function(element) {
@@ -17,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* Dynamically set the opacity of the 'body' element to fade it in after loading the fonts */
   WebFont.load({
-    custom: { families: [ "Source Sans Pro", "Damion" ] },
+    custom: { families: [ 'Source Sans Pro', 'Damion' ] },
     active: function() {
       let opacity = 0;
       const fadeIntensity = 0.01;
