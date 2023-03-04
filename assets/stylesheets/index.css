@@ -1,0 +1,67 @@
+@import url("./fonts.css");
+@import url("./move-in.css");
+
+html,
+body {
+  background-color: rgb(26, 28, 29);
+  font-family: "Unifont", sans-serif;
+  margin: 0;
+  color: whitesmoke;
+  user-select: none;
+  font-size: 16px;
+}
+
+.page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: #fdfd96;
+  font-size: 32px;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+}
+
+.footer img {
+  width: 100%;
+}
+
+.socials {
+  display: inline-flex;
+}
+
+.socialLink {
+  flex: auto;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0;
+}
+
+.socialLink a {
+  color: #c1cce3;
+}
+
+@media only screen and (max-width: 768px) {
+  .socialLink {
+    flex: auto;
+    padding: 0px;
+  }
+}
+
+a {
+  color: #e3c1dc;
+}
+
+h2 {
+  color: #c1d9e3;
+}
